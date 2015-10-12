@@ -222,7 +222,7 @@ module ActionController
       end
 
       def fields_for_style?(object)
-        object.is_a?(Hash) && object.all? { |k, v| k =~ /\A-?\d+\z/ && v.is_a?(Hash) }
+        object.is_a?(Hash) && object.all? { |k, v| k =~ /\A-?[-a-f\d]+\z/ && v.is_a?(Hash) }
       end
 
       def unpermitted_parameters!(params)  
